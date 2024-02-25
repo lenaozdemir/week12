@@ -1,3 +1,5 @@
+//Задание 2
+
 const text = document.querySelector(".text").textContent;
 console.log(`1. Количество символов в тексте: ${text.length}`);
 //2. Добавьте перенос строки после каждого символа ; и сохраните результат в переменную result.
@@ -26,3 +28,18 @@ console.log(`8. Индекс первого вхождения "моря": ${ind
 //9. Измените только первую букву в переменной replacedText на заглавную без использования регулярных выражений и сохраните результат в переменную modifiedText.
 const modifiedText = replacedText[0].toUpperCase() + replacedText.slice(1);
 console.log(`9. Строка с измененной первой буквой: ${modifiedText}`);
+
+//Задание 3
+const alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+const random = document.querySelector("#random-result");
+const buttonRandom = document.querySelector("#random_button");
+
+function makeRandom() {
+  random.textContent =
+    alphabet[Math.floor(Math.random() * 33)] +
+    alphabet[Math.floor(Math.random() * 33)] +
+    alphabet[Math.floor(Math.random() * 33)] +
+    alphabet[Math.floor(Math.random() * 33)];
+}
+
+buttonRandom.addEventListener("click", makeRandom);
